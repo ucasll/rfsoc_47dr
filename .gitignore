@@ -205,3 +205,64 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# ==========================================
+# RFSoC 项目专用 Git 忽略规则
+# ==========================================
+
+# --- 1. Python 杂质 (上位机) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+
+# --- 2. Vivado 硬件工程杂质 (关键！防止上传数 GB 的缓存) ---
+# 忽略 Vivado 自动生成的日志和操作记录
+*.log
+*.jou
+*.str
+*.pb
+
+# 忽略 Vivado 运行时的中间目录
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+
+# 忽略位流导出目录 (如果你有统一的导出路径)
+# /impl/
+
+# --- 3. 嵌入式 C 编译产物 (Vitis / SDK) ---
+*.o
+*.elf
+*.bin
+Debug/
+Release/
+.sdk/
+.metadata/
+RemoteSystemsTempFiles/
+
+# --- 4. 强制保留的核心文件 (防止被误删) ---
+# 尽管上面已经过滤了目录，但通过以下规则确保核心源码绝对被追踪
+!*.v
+!*.sv
+!*.vhd
+!*.xci
+!*.xdc
+!*.tcl
+!*.c
+!*.h
+!*.py
+!*.bit
+!*.hwh
+
+# --- 5. 其他杂项 ---
+.DS_Store
+Thumbs.db
+*.bak
