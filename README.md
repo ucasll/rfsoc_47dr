@@ -1,5 +1,5 @@
 # rfsoc_47dr
-# 项目名称 (Project Name): [RFSoC-Data-Acquisition]
+# 项目名称 (Project Name): [RFSoC-Data]
 
 [Optional: Add a one-sentence project summary here / 在此处添加一句话的项目简介]
 
@@ -15,9 +15,9 @@
 ## English Version
 
 ### 🛠 Development Environment
-* **Hardware**: Xilinx RFSoC [e.g., ZCU111 / ZCU216]
-* **Vivado Version**: 202x.x
-* **Software**: Vitis / SDK 202x.x
+* **Hardware**: Xilinx RFSoC [xczu47dr]
+* **Vivado Version**: 2022.2
+* **Software**: Vitis 2022.2
 * **Host Side**: Python 3.x (PYNQ compatible)
 
 ### 📁 Directory Structure
@@ -39,9 +39,9 @@
 ## 中文版
 
 ### 🛠 开发环境
-* **硬件平台**: Xilinx RFSoC [例如：ZCU111 / ZCU216]
-* **Vivado 版本**: 202x.x
-* **软件开发**: Vitis / SDK 202x.x
+* **硬件平台**: Xilinx RFSoC [xczu47dr]
+* **Vivado 版本**: 2022.2
+* **软件开发**: Vitis 2022.2
 * **上位机**: Python 3.x (兼容 PYNQ)
 
 ### 📁 目录结构说明
