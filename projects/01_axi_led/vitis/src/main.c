@@ -46,7 +46,7 @@
  */
 
 #include <stdio.h>
-#include "platform.h"
+// #include "platform.h" not need in led test
 #include "xil_printf.h"
 
 #include "xparameters.h"
@@ -63,7 +63,7 @@
 
 int main()
 {
-    init_platform();
+    // init_platform();	// not need
 
 //    print("Hello World\n\r");
 //    print("Successfully ran Hello World application");
