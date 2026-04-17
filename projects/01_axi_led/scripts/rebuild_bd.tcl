@@ -47,11 +47,24 @@ if { $list_projs eq "" } {
 }
 
 
-# Get the directory of the currently running script
+# # Get the directory of the currently running script
+# set script_path [file normalize [file dirname [info script]]]
+# # set IP repo paths
+# # attention: Using the relative path ../src/ip will keep your repository functional even after switching computers. 
+# set_property ip_repo_paths "[file normalize "../src/ip"]" [current_project]
+# update_ip_catalog
+
+# 1. Get the directory of the currently running script (D:/LL/rfsoc_47dr/projects/01_axi_led/scripts)
 set script_path [file normalize [file dirname [info script]]]
-# set IP repo paths
-# attention: Using the relative path ../src/ip will keep your repository functional even after switching computers. 
-set_property ip_repo_paths "[file normalize "../src/ip"]" [current_project]
+
+# 2. Based on the script directory, accurately compute the path to the ip folder.
+# [file join ...] automatically handles slashes according to the operating system, which is very robust.
+set my_ip_repo [file normalize [file join $script_path ".." "src" "ip"]]
+
+# 3. Apply the computed path to the project.
+set_property ip_repo_paths $my_ip_repo [current_project]
+
+# 4. update
 update_ip_catalog
 
 # CHANGE DESIGN NAME HERE
