@@ -46,10 +46,13 @@ if { $list_projs eq "" } {
    create_project project_1 myproj -part xczu47dr-ffve1156-2-i
 }
 
+
+# Get the directory of the currently running script
+set script_path [file normalize [file dirname [info script]]]
 # set IP repo paths
 # attention: Using the relative path ../src/ip will keep your repository functional even after switching computers. 
 set_property ip_repo_paths "[file normalize "../src/ip"]" [current_project]
-update_ip_catalog -reindex
+update_ip_catalog
 
 # CHANGE DESIGN NAME HERE
 variable design_name
