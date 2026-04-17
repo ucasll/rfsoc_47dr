@@ -46,6 +46,10 @@ if { $list_projs eq "" } {
    create_project project_1 myproj -part xczu47dr-ffve1156-2-i
 }
 
+# set IP repo paths
+# attention: Using the relative path ../src/ip will keep your repository functional even after switching computers. 
+set_property ip_repo_paths "[file normalize "../src/ip"]" [current_project]
+update_ip_catalog -reindex
 
 # CHANGE DESIGN NAME HERE
 variable design_name
