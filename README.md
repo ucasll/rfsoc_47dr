@@ -1,64 +1,38 @@
-# rfsoc_47dr
-# 项目名称 (Project Name): [RFSoC-Data]
+## 📄 License / 开源协议
+This project is licensed under the **MIT License**.
+本项目采用 **MIT** 开源协议。
 
-[Optional: Add a one-sentence project summary here / 在此处添加一句话的项目简介]
-
----
-
-## 🌏 Language / 语言
-- [English](#english-version)
-- [中文版](#中文版)
+# RFSoC-Data: Multi-Project Exploration
+本项目是一个基于 **XCZU47DR (RFSoC Gen3)** 的综合实验仓库，涵盖了从基础外设控制到高速数据传输的多个子工程。
 
 ---
 
-<a name="english-version"></a>
-## English Version
-
-### 🛠 Development Environment
-* **Hardware**: Xilinx RFSoC [xczu47dr]
-* **Vivado Version**: 2022.2
-* **Software**: Vitis 2022.2
-* **Host Side**: Python 3.x (PYNQ compatible)
-
-### 📁 Directory Structure
-* `hw/`: Verilog/SystemVerilog sources, XDC constraints.
-* `ip/`: IP configuration files (.xci).
-* `sw/`: Embedded C source code (Vitis).
-* `python/`: Host scripts and Jupyter Notebooks.
-* `scripts/`: Tcl scripts for project recreation.
-* `bitstream/`: Pre-compiled `.bit` and `.hwh` files.
-
-### 🚀 How to Rebuild
-1. Open **Vivado Tcl Console**.
-2. Navigate to the project root: `cd <project_path>/scripts/`.
-3. Run: `source rebuild_project.tcl`.
+## 🛠 开发环境 (Global Environment)
+* **Hardware**: AMD/Xilinx RFSoC [xczu47dr] (e.g., ZCU216 or Custom Board)
+* **Toolchain**: Vivado / Vitis 2022.2
+* **Host Side**: Python 3.10+
+* **Language**: C (Embedded), Verilog/SystemVerilog, Python
 
 ---
 
-<a name="中文版"></a>
-## 中文版
+## 📁 项目导航 (Project Navigation)
 
-### 🛠 开发环境
-* **硬件平台**: Xilinx RFSoC [xczu47dr]
-* **Vivado 版本**: 2022.2
-* **软件开发**: Vitis 2022.2
-* **上位机**: Python 3.x (兼容 PYNQ)
+| 工程名称 (Project) | 核心功能 (Core Features) | 状态 (Status) |
+| :--- | :--- | :--- |
+| [**01_axi_led**](./projects/01_axi_led/) | 最小系统构建&led blink | ✅ Done |
+| [**02_lwip_led**](./projects/02_lwip_led/) | lwIP TCP 通信控制 4-bit LED，Python 上位机 | ✅ Done |
+| [**03_ada_loop**](./projects/03_ada_loop/) | RFDC 数据采集与 AXI-Stream 传输 | 🛠 WIP |
 
-### 📁 目录结构说明
-* `hw/`: 包含 Verilog/SystemVerilog 源码、XDC 约束。
-* `ip/`: IP 核配置文件 (.xci)。
-* `sw/`: 嵌入式 C 源码 (Vitis 工程)。
-* `python/`: 上位机控制脚本、Jupyter 演示。
-* `scripts/`: 包含工程重建的 Tcl 脚本。
-* `bitstream/`: 存放已编译的比特流 (.bit) 和硬件描述 (.hwh)。
+---
 
-### 🚀 如何重建工程
-1. 打开 **Vivado Tcl Console**。
-2. 切换到项目路径: `cd <项目路径>/scripts/`。
-3. 执行命令: `source rebuild_project.tcl`。
+## 🚀 快速上手 (Quick Start)
+每个子工程都是独立的，请进入对应的子目录查看详细的重建指南：
+1. `cd projects/01_axi_led`
+2. 阅读该目录下的 `README.md` 执行重建。
 
 ---
 
 ## 📄 License / 开源协议
 This project is licensed under the **MIT License**.
 本项目采用 **MIT** 开源协议。
+本仓库代码仅供学习与技术交流。
