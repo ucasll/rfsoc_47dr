@@ -1,7 +1,3 @@
-## 📄 License / 开源协议
-This project is licensed under the **MIT License**.
-本项目采用 **MIT** 开源协议。
-
 # RFSoC-Data: Multi-Project Exploration
 本项目是一个基于 **XCZU47DR (RFSoC Gen3)** 的综合实验仓库，涵盖了从基础外设控制到高速数据传输的多个子工程。
 
@@ -34,5 +30,5 @@ This project is licensed under the **MIT License**.
 
 ## 📄 License / 开源协议
 This project is licensed under the **MIT License**.
-本项目采用 **MIT** 开源协议。
+本项目采用 **MIT** 开源协议。  
 本仓库代码仅供学习与技术交流。
